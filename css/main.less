@@ -1,11 +1,113 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 
+body {
+	background-color: rgba(23, 10, 119,0.7);
+	padding-top: 50px;
+}
+
+a {
+	color: white;
+}
+
+.text-white {
+	color: white;
+}
+
+.a-block {
+	display: block;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.a-block:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.a-block:visited {
+	color: white;
+}
+
+
+/* WIDGET */
+
+@gray-light: #f4f4f4;
+
+.blue-link {
+	color: #3670a3;
+}
+
+.blue-link:hover {
+	color: #39b3d7;
+}
+
+.last-applied {
+
+	padding-bottom: 38px;
+
+	&__list {
+		height: 425px;
+		overflow: hidden;
+
+		.item {
+			margin-top: 20px;
+			padding: 10px 0 10px 10px;
+			background-color: white;
+			border-radius: 4px;
+			position: relative;
+			border-width: 2px;
+			border-left: 6px;
+			border-style: solid;
+			border-color: transparent;
+			border-left-color: #3670a3;
+			
+			&__img {
+				width: 60px;
+				height: 60px;
+				padding-top: 6px;
+			}
+
+			&__title {
+				font-size: 18px;
+				padding-left: 10px;
+			}
+
+			&__text {
+				font-size: 16px;
+				padding-left: 10px;
+			}
+
+			&__triangle {
+				position: absolute;
+				top: 47%;
+				left: 0px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px 0 5px 5px;
+				border-color: transparent transparent transparent #3670a3;
+			}
+
+			&:hover {
+				border-color: #39b3d7;
+
+				.item__triangle {
+					border-color: transparent transparent transparent #39b3d7;
+				}
+			}
+		}
+	}
+}
+
+/* WIDGET END */
+
 .card {
-	background-color: rgba(197, 244, 163, 0.9);
+	border:1px solid white;
 	height: 100px;
 	padding-top: 30px;
-	width: 99%;
-	margin: 20px auto;
+	margin-top: 20px;
 	z-index: -1;
 	position: relative;
 }

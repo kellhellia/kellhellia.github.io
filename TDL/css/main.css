@@ -1,0 +1,85 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+	background-image: url(../img/subtle_grunge.png);
+}
+
+input {
+	width: 70%;
+	margin-bottom: 20px;
+}
+
+@font-face {
+	font-family:Lips;
+	src:url(../fonts/NR.otf);
+}
+
+.tdItem {
+	padding: 10px;
+	cursor: default;
+	border-radius: 7px;
+}
+
+.tdItem:hover{
+	background-color: lightblue;
+}
+
+.instruction {
+	width: 100%;
+}
+
+.greyText {
+	text-align: center;
+	color: black;
+}
+
+.header {
+	text-align: center;
+	font-size: 100px;
+	font-family: Lips;
+}
+
+.lg {
+	font-size: 150px;
+	color: black;
+}
+
+img {
+		width: 200px;
+		height: 200px;
+	}
+
+@media screen and (max-width: 480px) {
+ 
+img {
+		width: 100px;
+		height: 100px;
+	}
+ 
+ 	.header {
+	 	text-align: center;
+		font-size: 40px;
+		font-family: Lips;
+ 	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+	img {
+		width: 140px;
+		height: 140px;
+	}
+ 
+ 	.header {
+	 	text-align: center;
+		font-size: 60px;
+		font-family: Lips;
+ 	}
+}
+
+
+
+
+
