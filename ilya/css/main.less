@@ -1,20 +1,30 @@
 @font-face {
-	src: url(../fonts/broskovaya.ttf);
+	src: url(../fonts/BruskovayaC.otf);
 	font-family: bra;
 }
 
 @font-face {
-	src: url(../fonts/GothaProReg.otf);
+	src: url(../fonts/BruskovayaNarrowC.otf);
+	font-family: braNarrow;
+}
+
+@font-face {
+	src: url(../fonts/g/GothaProReg.otf);
 	font-family: goth;
 }
 
 @font-face {
-	src: url(../fonts/Intro-Bold.ttf);
+	src: url(../fonts/g/GothaProMed.otf);
+	font-family: gothMed;
+}
+
+@font-face {
+	src: url(../fonts/Intro/Intro-Bold.ttf);
 	font-family: InBold;
 }
 
 @font-face {
-	src: url(../fonts/Intro-Book.ttf);
+	src: url(../fonts/Intro/Intro-Regular.ttf);
 	font-family: InBook;
 }
 
@@ -33,6 +43,11 @@ ul {
 		margin-left: 50px;
 	}
 
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+	font-family: InBold;
+	color: white;
+}
+
 .social {
 	margin-left: 50px;
 	padding-top: 25px;
@@ -46,15 +61,15 @@ ul {
 .nav-number {
 	display: block;
 	margin-left: 35px;
-	margin-top: 5px;
+	margin-top: 2px;
 	color: black;
 	font-size: 16px;
-	font-family: goth;
+	font-family: gothMed;
 }
 
 /* NAVBAR END */
 
-.header-main {
+.home-wrapper {
 	background-image: url(../img/header-img.png);
 	height: 765px;
 	position: relative;
@@ -62,6 +77,13 @@ ul {
 	padding-top: 235px;
 	background-position: center;
 	background-size: cover;	
+}
+
+.header-main {
+
+	&__heading {
+		font-family: bra;
+	}
 
 	&__description {
 		color: black;	
@@ -72,6 +94,7 @@ ul {
 		padding-top: 190px;
 		color: white;	
 		font-size: 24px;
+		font-family: InBold;
 
 		@media (max-width: 400px) {
 			padding-top:120px;
@@ -99,18 +122,22 @@ ul {
 
 	&__heading {
 		font-size: 18px;
+		font-family: InBold;
 	}
 
 	&__number {
 		font-size: 50px;
+		font-family: bra;
 	}
 
 	&__headingP {
 		font-size: 22px;
+		font-family: InBold;
 	}
 
 	&__content {
 		font-size: 16px;
+		font-family: InBook;
 	}
 }
 
@@ -127,6 +154,7 @@ ul {
 	&__heading {
 		font-size: 18px;
 		padding-bottom: 20px;
+		font-family: InBold;
 	}
 
 	&__line {
@@ -141,6 +169,7 @@ ul {
 	&__content {
 		padding-top: 20px;
 		font-size: 16px;
+		font-family: goth;
 	}
 
 	&__triangle {
