@@ -6312,6 +6312,7 @@ a {
   border: 2px solid white;
   border-radius: 5px;
   height: 300px;
+  margin-top: 20px;
   background-position: center;
 }
 .a-block--puzzle {
@@ -6321,6 +6322,7 @@ a {
   border: 2px solid white;
   border-radius: 5px;
   height: 300px;
+  margin-top: 20px;
   background-position: center;
 }
 .a-block--ill {
@@ -6330,6 +6332,7 @@ a {
   border: 2px solid white;
   border-radius: 5px;
   height: 300px;
+  margin-top: 20px;
   background-position: center;
 }
 .a-block--epils {
@@ -6339,6 +6342,7 @@ a {
   border: 2px solid white;
   border-radius: 5px;
   height: 300px;
+  margin-top: 20px;
   background-position: center;
 }
 /* WIDGET */
