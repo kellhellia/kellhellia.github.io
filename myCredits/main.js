@@ -121,8 +121,8 @@ class App extends React.Component {
         let guysList = _.map(lsList, (n, index) => {
             let credits = _.map(n.debs, (m, key) => {
                 return <div className="row" key={key}>
-                    <div className="col-xs-6">{m.debt} - {m.description}</div>
-                     <div className="col-xs-6 text-right">
+                    <div className="col-sm-6">{m.debt} - {m.description}</div>
+                     <div className="col-sm-6 text-right">
                         <i onClick={this.handleDelete.bind(this, n, m)} className="list__icon red glyphicon glyphicon-remove"></i>
                       </div>
                 </div>;
@@ -131,12 +131,12 @@ class App extends React.Component {
             return <li className="clearfix" key={index}>
                       <div className="list__item">
                           <div className="row">
-                             <div className="col-xs-6">
+                             <div className="col-sm-6">
                                 {n.name}
                              </div>
                           </div>
                           <div className="row">
-                             <div className="col-xs-12">
+                             <div className="col-sm-12">
                                 {credits}
                              </div>
                           </div>
@@ -151,11 +151,11 @@ class App extends React.Component {
             <div className="container">
                 <div className="row">
                     <h2 className="text-center">myCredits</h2>
-                    <div className="col-xs-6 col-xs-offset-3">
+                    <div className="col-sm-6 col-sm-offset-3">
                         <form onSubmit={this.handleAddCredit.bind(this)}>
 
                             <div className="row">
-                                <div className="col-xs-8 col-xs-offset-2">
+                                <div className="col-sm-8 col-sm-offset-2">
                                     <h3>Add new credit</h3>
                                     <div className="input-group form-group">
                                       <span className="input-group-addon">
@@ -198,7 +198,7 @@ class App extends React.Component {
                             </div>
 
                             <div className="row">
-                                <div className="col-xs-8 col-xs-offset-2">
+                                <div className="col-sm-8 col-sm-offset-2">
                                     <button type="submit" className="btn btn-primary center-block">Add new debt</button>
                                     {alert}
                                 </div>
@@ -206,7 +206,7 @@ class App extends React.Component {
                         </form>
 
                         <div className="row">
-                            <div className="col-xs-8 col-xs-offset-2">
+                            <div className="col-sm-8 col-sm-offset-2">
                                 <h3>Debtors</h3>
 
                                 <ul className="list list-unstyled">
