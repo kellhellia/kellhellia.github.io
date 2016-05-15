@@ -6,6 +6,12 @@ body {
     margin-bottom: 300px;
 }
 
+@media (max-width: 756px) {
+    .container-fluid {
+        margin-bottom: 50px;
+    }
+}
+
 .nav-block {
     font-size: 18px;
     color: black;
