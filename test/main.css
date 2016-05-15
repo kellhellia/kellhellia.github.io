@@ -2,16 +2,6 @@ body {
     background-color: #EAEAEA;
 }
 
-.container-fluid {
-    margin-bottom: 300px;
-}
-
-@media (max-width: 756px) {
-    .container-fluid {
-        margin-bottom: 50px;
-    }
-}
-
 .nav-block {
     font-size: 18px;
     color: black;
@@ -30,6 +20,22 @@ body {
     color: white;
 }
 
+.block-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-block {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.table-row {
+    display: table-row;
+    height: 50px;
+}
+
 .box-shadow {
     -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
@@ -41,6 +47,8 @@ body {
     border-radius: 10px;
     padding-bottom: 25px;
     background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .form-control {
@@ -78,4 +86,22 @@ body {
     background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+}
+
+@media (max-height: 450px) {
+    .form-block {
+        padding-bottom: 5px;
+    }
+
+    .form-btn {
+        padding: 3px;
+    }
+
+    .form-header {
+        padding: 3px 0;
+    }
+
+    .form-control {
+        height: 25px;
+    }
 }
