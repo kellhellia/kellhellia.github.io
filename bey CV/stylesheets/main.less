@@ -1,0 +1,260 @@
+@sky-blue: #00aeef;
+@sky-blue_dark: #004c69;
+@dark-grey: #212121;
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: ralewayLight;
+    src: url(../fonts/Raleway-Light.ttf);
+}
+
+@font-face {
+    font-family: ralewayBold;
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+
+.raleway {
+    font-family: raleway;
+}
+
+.raleway-light {
+    font-family: ralewayLight;
+}
+
+.raleway-bold {
+    font-family: ralewayBold;
+}
+
+// Utils
+
+.white {
+    color: white;
+}
+
+.bg-img {
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.pt120 {
+    padding-top: 120px;
+}
+
+// Page styles
+
+body {
+    font-family: raleway;
+    font-size: 16px;
+    color: white;
+}
+
+// Navbar
+
+.navbar {
+    transition: 0.3s;
+    padding-top: 40px;
+    z-index: 10 !important;
+
+    &-line {
+        height: 35px;
+        border-right: 1px solid white;
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    &__avatar {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .nav-border {
+        display: inline-block;
+        border: 1px solid white;
+        padding: 0px 20px;
+        border-radius: 3px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        a:hover {
+            color: white !important;
+        }
+    }
+
+    &-default {
+        background-color: transparent;
+        border: none;
+
+        .navbar-brand {
+            color: white;
+            padding: 2px 15px;
+            font-size: 25px;
+            padding-top: 13px;
+            padding-right: 20px;
+            margin-right: 10px;
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                color: white;
+            }
+
+            &:focus {
+                color: white;
+            }
+
+            img {
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 14px;
+            }
+        }
+
+        .navbar-nav li a {
+            color: white;
+            font-size: 15px;
+            margin-left: 15px;
+
+            &:hover {
+                color: darken(#ccc, 5%);
+            }
+
+            &:focus {
+                color: white;
+                outline: none;
+            }
+        }
+
+        .nav>li>.active {
+
+        }
+    }
+}
+
+.navbar-shrink {
+    padding: 10px 0;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dashboard {
+    position: relative;
+    z-index: 2;
+    background-image: url(../img/7.jpg);
+    padding: 450px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about {
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/5.jpg);
+    padding: 350px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        font-size: 20px;
+
+        &_big {
+            font-size: 24px;
+            font-style: italic;
+        }
+    }
+}
+
+.work {
+    background-image: url(../img/9.png);
+    padding: 250px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    a {
+        color: #13e0f7;
+
+        &:hover {
+            color: darken(#13e0f7, 5%);
+        }
+    }
+}
+
+.why {
+    background-color: #72BF94;
+    padding: 250px 0;
+
+    &__icon {
+        border: 1px solid white;
+        border-radius: 100%;
+        padding-top: 70px;
+        width: 250px;
+        height: 250px;
+        font-size: 100px;
+        margin-bottom: 25px;
+    }
+
+    &__heading {
+        font-size: 25px;
+    }
+
+    &__content {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+}
+
+.contacts {
+    background-color: #BF728D;
+    padding: 200px 0;
+
+    textarea {
+        resize: none;
+    }
+
+    .glyphicon {
+        font-size: 100px;
+    }
+
+    &__btn {
+        background-color: #72bf94;
+        width: 200px;
+        text-transform: uppercase;
+        padding: 10px 0;
+        border: none;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: darken(#72bf94, 5%);
+        }
+    }
+}
