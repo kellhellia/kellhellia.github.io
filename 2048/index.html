@@ -27,7 +27,10 @@
 
       function shareYourScore() {
         var gameState = JSON.parse(localStorage.getItem('gameState'));
-        VK.api("wall.post", {"message": "Я набрал " + gameState.score + " очков! А сколько наберешь ты?"});
+
+        if (gameState.score) {
+          VK.api("wall.post", {"message": "Я набрал " + JSON.parse(localStorage.getItem('gameState')) + " очков! А сколько наберешь ты?"});
+        }
       }
     </script>
   <div class="container">
@@ -41,6 +44,7 @@
       <div class="score-container">0</div>
       <div class="best-container">0</div>
       <a class="restart-button">New Game</a>
+      <button onclick="shareYourScore()">Ger score</button>
     </div>
 
     <div class="game-container">
