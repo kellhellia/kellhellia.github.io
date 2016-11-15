@@ -87,9 +87,9 @@
       var scoreNode = document.querySelector('.score-container').childNodes[0];
       var score = +scoreNode.nodeValue;
 
-      if (gameState.score) {
-        VK.api("wall.post", {"message": "Я набрал " + score + " очков! А сколько наберешь ты?"});
-      }
+      console.log(score);
+
+      VK.api("wall.post", {"message": "Я набрал " + score + " очков! А сколько наберешь ты?"});
     }
   </script>
   <script src="js/bind_polyfill.js"></script>
