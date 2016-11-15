@@ -28,9 +28,7 @@
       var gameState = JSON.parse(localStorage.getItem('gameState'));
 
       function shareYourScore() {
-        VK.api("wall.post", {"message": "Я набрал " + gameState.score + "очков! А сколько наберешь ты?"}, function (data) {
-          alert("Post ID:" + data.response.post_id);
-        });
+        VK.api("wall.post", {"message": "Я набрал " + gameState.score + "очков! А сколько наберешь ты?"});
       }
     </script>
   <div class="container">
@@ -51,7 +49,8 @@
         <p></p>
         <div class="lower">
           <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Try again</a>
+          <a class="retry-button">Попробовать еще раз!</a>
+          <a class="share-button" onclick="shareYourScore()">Поделиться рекордом с друзьями!</a>
         </div>
       </div>
 
