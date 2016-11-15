@@ -29,7 +29,6 @@
       <div id="score-container" class="score-container">0</div>
       <div class="best-container">0</div>
       <a class="restart-button">New Game</a>
-      <button onclick="shareYourScore()">Get score</button>
     </div>
 
     <div class="game-container">
@@ -86,8 +85,6 @@
     function shareYourScore() {
       var scoreNode = document.querySelector('.score-container').childNodes[0];
       var score = +scoreNode.nodeValue;
-
-      console.log(score);
 
       VK.api("wall.post", {"message": "Я набрал " + score + " очков! А сколько наберешь ты?"});
     }
