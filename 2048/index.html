@@ -25,9 +25,8 @@
         console.log('error!');
       }, '5.60');
 
-      var gameState = JSON.parse(localStorage.getItem('gameState'));
-
       function shareYourScore() {
+        var gameState = JSON.parse(localStorage.getItem('gameState'));
         VK.api("wall.post", {"message": "Я набрал " + gameState.score + " очков! А сколько наберешь ты?"});
       }
     </script>
