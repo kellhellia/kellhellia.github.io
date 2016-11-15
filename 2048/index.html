@@ -17,22 +17,7 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-    <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-    <script type="text/javascript">
-      VK.init(function() {
-        console.log('success!');
-      }, function() {
-        console.log('error!');
-      }, '5.60');
-
-      function shareYourScore() {
-        var gameState = JSON.parse(localStorage.getItem('gameState'));
-
-        if (gameState.score) {
-          VK.api("wall.post", {"message": "Я набрал " + gameState.store + " очков! А сколько наберешь ты?"});
-        }
-      }
-    </script>
+  <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
   <div class="container">
     <div class="above-game">
       <div class="game-explanation">
@@ -41,10 +26,10 @@
           <strong class="important">Как играть:</strong> используйте <strong>стрелки на клавиатуре</strong>, чтобы двигать блоки. Когда два блока с одинаковыми картинками стоят рядом - <strong>соединяйте их!</strong>
         </p>
       </div>
-      <div class="score-container">0</div>
+      <div id="score-container" class="score-container">0</div>
       <div class="best-container">0</div>
       <a class="restart-button">New Game</a>
-      <button onclick="shareYourScore()">Ger score</button>
+      <button onclick="shareYourScore()">Get score</button>
     </div>
 
     <div class="game-container">
@@ -91,6 +76,22 @@
     <hr>
   </div>
 
+  <script type="text/javascript">
+    VK.init(function() {
+      console.log('success!');
+    }, function() {
+      console.log('error!');
+    }, '5.60');
+
+    function shareYourScore() {
+      var scoreNode = document.querySelector('.score-container').childNodes[0];
+      var score = +scoreNode.nodeValue;
+
+      if (gameState.score) {
+        VK.api("wall.post", {"message": "Я набрал " + score + " очков! А сколько наберешь ты?"});
+      }
+    }
+  </script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
