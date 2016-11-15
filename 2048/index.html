@@ -20,15 +20,15 @@
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
     <script type="text/javascript">
       VK.init(function() {
-         console.log('success!');
+        console.log('success!');
       }, function() {
-           console.log('error!');
+        console.log('error!');
       }, '5.60');
 
       var gameState = JSON.parse(localStorage.getItem('gameState'));
 
       function shareYourScore() {
-        VK.api("wall.post", {"message": "Я набрал " + gameState.score + "очков! А сколько наберешь ты?"});
+        VK.api("wall.post", {"message": "Я набрал " + gameState.score + " очков! А сколько наберешь ты?"});
       }
     </script>
   <div class="container">
