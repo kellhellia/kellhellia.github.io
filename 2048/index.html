@@ -86,7 +86,10 @@
       var scoreNode = document.querySelector('.score-container').childNodes[0];
       var score = +scoreNode.nodeValue;
 
-      VK.api("wall.post", {"message": "Я набрал " + score + " очков! А сколько наберешь ты?"});
+      VK.api("wall.post", {
+        "message": "Я набрал " + score + " очков в 2048 : Блоки! А сколько наберешь ты?",
+        "attachments": "photo133139486_456239017"
+      });
     }
   </script>
   <script src="js/bind_polyfill.js"></script>
