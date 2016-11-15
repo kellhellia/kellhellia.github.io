@@ -29,7 +29,7 @@
         var gameState = JSON.parse(localStorage.getItem('gameState'));
 
         if (gameState.score) {
-          VK.api("wall.post", {"message": "Я набрал " + JSON.parse(localStorage.getItem('gameState')) + " очков! А сколько наберешь ты?"});
+          VK.api("wall.post", {"message": "Я набрал " + gameState.store + " очков! А сколько наберешь ты?"});
         }
       }
     </script>
